@@ -33,7 +33,6 @@ const NftAddForm = () => {
       selected: false,
     },
   ];
-
   return (
     <>
       <Formik

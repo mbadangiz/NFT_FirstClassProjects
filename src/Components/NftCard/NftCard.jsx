@@ -1,10 +1,12 @@
 import { useState } from "react";
-import ModalDelete from "../ModalContainer/ModalDelete";
+import ModalDelete from "../ModalDelete/ModalDelete";
+import ModalUpdate from "../ModalUpdate/ModalUpdate";
 import { useNft } from "../Provider/NftsProvider";
 
 const NftCard = ({ data }) => {
   const [isHidden, setIsHidden] = useState(true);
 
+  const [isHiddenUpdateModal, setisHiddenUpdateModal] = useState(false);
   const nft = useNft();
 
   const { id, name, price, price_unit, description } = data;
@@ -17,6 +19,10 @@ const NftCard = ({ data }) => {
   };
   return (
     <>
+      <ModalUpdate
+        upDdisplayProp={isHiddenUpdateModal}
+        upDisplayHandler={() => setisHiddenUpdateModal(!isHiddenUpdateModal)}
+      />
       <ModalDelete
         onDelHandler={() => cardDeleteHander(id)}
         displayHandler={() => setIsHidden(!isHidden)}

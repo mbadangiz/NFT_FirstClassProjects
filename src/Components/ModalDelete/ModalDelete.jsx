@@ -1,6 +1,6 @@
 import Button from "../Common/Button/Button";
 
-const ModalDelete = ({ nftId, displayHandler, displayProp, onDelHandler }) => {
+const ModalDelete = ({ displayHandler, displayProp, onDelHandler }) => {
   return (
     <div
       className={`${

@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import NftCard from "../NftCard/NftCard";
 import { useNft } from "../Provider/NftsProvider";
 
@@ -14,6 +13,3 @@ const NftCardsContainer = () => {
 };
 
 export default NftCardsContainer;
-{
-  /* <NftCard description="description" name="Nft" /> */
-}

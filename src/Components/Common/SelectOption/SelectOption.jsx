@@ -1,6 +1,7 @@
 import { Field } from "formik";
 
 const SelectOption = ({ Options, name }) => {
+  // const defaultVal = Options.indexO
   return (
     <Field
       className="w-[65%] select-general-rules outline-none"
