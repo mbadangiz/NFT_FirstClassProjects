@@ -1,9 +1,10 @@
+import ManageNfts from "./Components/ManageNfts/ManageNfts";
+import NftsProvider from "./Components/Provider/NftsProvider";
 function App() {
-  console.log("sss");
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <NftsProvider>
+      <ManageNfts />
+    </NftsProvider>
   );
 }
 export default App;

@@ -2,10 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .f-oxa-reg {
+    font-family: "Oxanium-Regular";
+  }
+  .f-oxa-bold {
+    font-family: "Oxanium Bold";
+  }
+  .f-oxa-semibold {
+    font-family: "Oxanium SemiBold";
+  }
+  .btn-color-bg {
+    background-color: #ffc837;
+  }
+  .btn-color-text {
+    color: #ffc837;
+  }
+  .btn-color-border {
+    border-color: #ffc837;
+  }
+  .bg-img-arrow-down {
+    background: url("./Img/angle-small-down.svg") no-repeat 93% 11px;
+    background-size: 24px;
+  }
+  .color-bg {
+    color: #200a1b;
+  }
+  .nft-card-border {
+    border-color: #3d2942;
+  }
+  .bg-modal-box {
+    background-color: #3d2942;
+  }
+
+  .nftCard:first-child {
+    margin-bottom: 50px !important;
+  }
+  .modal-bg-color {
+    background: #200a1bb4;
+  }
+}
+@layer components {
+  .Manage-titles {
+    @apply text-[26px] f-oxa-semibold font-bold;
+  }
+  .inputs-common-rules {
+    @apply bg-white/20 outline-none py-3 w-full h-full pl-4 
+    rounded-t-md absolute top-0 left-0 border-b-[2px] border-solid btn-color-border
+    focus:bg-white/40 transition-all duration-150 ease-linear placeholder:text-opacity-90 
+    placeholder:text-white appearance-none;
+  }
+  .select-general-rules {
+    @apply bg-white/20 rounded-t-md h-full border-[2px] border-solid btn-color-border appearance-none
+    pl-4 bg-img-arrow-down relative;
+  }
+  .select-general-rules option {
+    @apply text-gray-950 bg-amber-500 p-0 m-0;
+  }
+}
+
 * {
-  margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   box-sizing: border-box;
+}
+:root {
+  color: #fff;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: #200a1b url("./Img/bg.png") no-repeat fixed 0 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
