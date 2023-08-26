@@ -6,7 +6,7 @@ import { useNft } from "../Provider/NftsProvider";
 const NftCard = ({ data }) => {
   const [isHidden, setIsHidden] = useState(true);
 
-  const [isHiddenUpdateModal, setisHiddenUpdateModal] = useState(false);
+  const [isHiddenUpdateModal, setisHiddenUpdateModal] = useState(true);
   const nft = useNft();
 
   const { id, name, price, price_unit, description } = data;
@@ -17,9 +17,11 @@ const NftCard = ({ data }) => {
     nft.setNft(filteredItems);
     setIsHidden(!isHidden);
   };
+
   return (
     <>
       <ModalUpdate
+        nftId={id}
         upDdisplayProp={isHiddenUpdateModal}
         upDisplayHandler={() => setisHiddenUpdateModal(!isHiddenUpdateModal)}
       />
@@ -57,7 +59,10 @@ const NftCard = ({ data }) => {
               className="fi fi-sr-trash-xmark text-white/60 text-lg hover:text-white/90 cursor-pointer"
               onClick={() => setIsHidden(!isHidden)}
             ></i>
-            <i className="i fi-sr-edit text-white/60 text-lg hover:text-white/90 cursor-pointer "></i>
+            <i
+              className="i fi-sr-edit text-white/60 text-lg hover:text-white/90 cursor-pointer "
+              onClick={() => setisHiddenUpdateModal(!isHiddenUpdateModal)}
+            ></i>
           </div>
           <div className="text-right text-xs text-white/75">16 Aguest,2016</div>
         </div>

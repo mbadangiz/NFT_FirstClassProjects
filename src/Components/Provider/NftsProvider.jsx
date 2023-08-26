@@ -6,10 +6,17 @@ const NftsProvider = ({ children }) => {
   const [nft, setNft] = useState([
     {
       id: 1,
-      name: "ape khaste",
+      name: "Ahmad Ali Ghorbani",
       price: 45,
       price_unit: "fi fi-brands-bitcoin",
-      description: "aas7865465safssssssssssssssss",
+      description: "This is Ahmad ali a kind man fro south africa.",
+    },
+    {
+      id: 2,
+      name: "Mahmoud Joon",
+      price: 52,
+      price_unit: "fi fi-brands-bitcoin",
+      description: "Mahmoud Joon is very kind man he loves flowers.",
     },
   ]);
   return (

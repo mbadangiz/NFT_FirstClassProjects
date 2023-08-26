@@ -3,7 +3,7 @@ import InputText from "../Common/Inputs/Inputs";
 import SelectOption from "../Common/SelectOption/SelectOption";
 import TextArea from "../Common/TextArea/TextArea";
 import Button from "../Common/Button/Button";
-const UserForm = ({ FormHandler, initValue }) => {
+const UserForm = ({ FormHandler, initValue, onDelHandler }) => {
   const Options = [
     { id: 1, val: "fi fi-brands-bitcoin", title: "Bitcoin", selected: true },
     { id: 2, val: "fi fi-brands-ethereum", title: "Ethereum", selected: false },
@@ -37,7 +37,6 @@ const UserForm = ({ FormHandler, initValue }) => {
             textAreaName="description"
             placeholder="NFT`s Description"
           />
-
           <Button type="submit" innerText="Submit Informations" />
         </Form>
       </Formik>
