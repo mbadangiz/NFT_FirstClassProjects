@@ -44,7 +44,7 @@
 }
 @layer components {
   .Manage-titles {
-    @apply text-[26px] f-oxa-semibold font-bold;
+    @apply text-[24px] f-oxa-semibold font-bold;
   }
   .inputs-common-rules {
     @apply bg-white/20 outline-none py-3 w-full h-full pl-4 
