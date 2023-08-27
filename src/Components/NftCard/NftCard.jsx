@@ -23,7 +23,7 @@ const NftCard = ({ data }) => {
       <ModalUpdate
         nftId={id}
         upDdisplayProp={isHiddenUpdateModal}
-        upDisplayHandler={() => setisHiddenUpdateModal(!isHiddenUpdateModal)}
+        upDisplayHandler={setisHiddenUpdateModal}
       />
       <ModalDelete
         onDelHandler={() => cardDeleteHander(id)}

@@ -8,7 +8,7 @@ import Button from "../Common/Button/Button";
 
 const ModalUpdate = ({ nftId, upDisplayHandler, upDdisplayProp }) => {
   const nft = useNft();
-
+  // console.log(upDisplayHandler);
   const Options = [
     { id: 1, val: "fi fi-brands-bitcoin", title: "Bitcoin", selected: true },
     { id: 2, val: "fi fi-brands-ethereum", title: "Ethereum", selected: false },
@@ -64,6 +64,7 @@ const ModalUpdate = ({ nftId, upDisplayHandler, upDdisplayProp }) => {
               placeholder="NFT`s Description"
             />
             <Button
+              type="button"
               innerText="Cancel The Process"
               styleModel="outlined"
               clickEvent={() => upDisplayHandler(!upDdisplayProp)}
