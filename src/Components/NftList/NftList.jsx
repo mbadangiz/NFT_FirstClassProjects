@@ -1,4 +1,4 @@
-import NftCardsContainer from "../NftCardsContainer/NftCardsContainer";
+import NftCardManagePartsContainer from "../NftCardManagePartsContainer/NftCardManagePartsContainer";
 import NftManageTitles from "../NftManageTitles/NftManageTitles";
 
 const NftList = () => {
@@ -8,7 +8,7 @@ const NftList = () => {
         iconName="fi fi-sr-rectangle-list"
         innerText="NFT List"
       />
-      <NftCardsContainer />
+      <NftCardManagePartsContainer />
     </div>
   );
 };

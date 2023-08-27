@@ -4,7 +4,7 @@ import NftsProvider from "./Components/Provider/NftsProvider";
 function App() {
   return (
     <NftsProvider>
-      {/* <ManageNfts   /> */}
+      {/* <ManageNfts /> */}
       <HomePage />
     </NftsProvider>
   );

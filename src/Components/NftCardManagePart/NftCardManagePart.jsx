@@ -3,13 +3,13 @@ import ModalDelete from "../ModalDelete/ModalDelete";
 import ModalUpdate from "../ModalUpdate/ModalUpdate";
 import { useNft } from "../Provider/NftsProvider";
 
-const NftCard = ({ data }) => {
+const NftCardManagePart = ({ data }) => {
   const [isHidden, setIsHidden] = useState(true);
 
   const [isHiddenUpdateModal, setisHiddenUpdateModal] = useState(true);
   const nft = useNft();
 
-  const { id, name, price, price_unit, description } = data;
+  const { id, name, img, price, price_unit, description } = data;
 
   const cardDeleteHander = (id) => {
     const copiedNft = [...nft.nft];
@@ -34,12 +34,12 @@ const NftCard = ({ data }) => {
         className="w-full h-28 bg-white/10 backdrop-blur-2xl 
         nft-card-border border-[2.5px] border-solid rounded-xl
         flex flex-row content-center items-center relative z-20 justify-between 
-        px-4 hover:bg-white/20 transition-all duration-300 nftCard"
+        px-4 hover:bg-white/20 transition-all duration-300 NftCardManagePart"
       >
         <div className="flex flex-row h-full w-4/5 gap-x-4">
           <div className="h-full  py-[6px]">
             <img
-              src="./../Img/img1.jpg"
+              src={`./../Img/${img}`}
               className="w-full h-full rounded"
               alt="bored-ape"
             />
@@ -71,4 +71,4 @@ const NftCard = ({ data }) => {
   );
 };
 
-export default NftCard;
+export default NftCardManagePart;

@@ -1,4 +1,4 @@
-import DetailsCardContainer from "../../DetailsCardContainer/DetailsCardContainer";
+import DetailsCardContainer from "../DetailsCardContainer/DetailsCardContainer";
 import Header from "../Header/Header";
 import Wrapper from "../Wrapper/Wrapper";
 
