@@ -9,7 +9,17 @@ const NftCardManagePart = ({ data }) => {
   const [isHiddenUpdateModal, setisHiddenUpdateModal] = useState(true);
   const nft = useNft();
 
-  const { id, name, img, price, price_unit, description } = data;
+  const {
+    id,
+    name,
+    img,
+    price,
+    price_unit,
+    description,
+    like,
+    authorName,
+    authorId,
+  } = data;
 
   const cardDeleteHander = (id) => {
     const copiedNft = [...nft.nft];

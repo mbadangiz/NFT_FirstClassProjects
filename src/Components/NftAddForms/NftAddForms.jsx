@@ -7,6 +7,7 @@ const NftAddForm = () => {
   const addNftProdutcsHandler = (val) => {
     const nftObj = {
       id: nft.nft.length + 1,
+      img: "img1.jpg",
       name: val.name,
       price: val.price,
       price_unit: val.price_unit,

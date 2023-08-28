@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Common/Button/Button";
 
 const Header = () => {
@@ -10,7 +11,9 @@ const Header = () => {
         Best Nfts in Last Week
       </h3>
       <div className="w-60">
-        <Button innerText="Manage Your Nfts" type="button" />
+        <Link to="/Managenft">
+          <Button innerText="Manage Your Nfts" type="button" />
+        </Link>
       </div>
     </div>
   );
